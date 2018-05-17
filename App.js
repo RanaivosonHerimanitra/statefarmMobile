@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyleSheet, Text, View,AppRegistry } from 'react-native';
-
-const App = () => {
-  return (
-    <Text>Some text</Text>
-
-  )
+import React, { Component } from 'react';
+import { Text ,AppRegistry} from 'react-native';
+import Header from './src/components/header'
+export default class App extends Component {
+  render() {
+    return <Header/>
+  }
 }
 
-AppRegistry.registerComponent("reactflowjs",()=>App)
+
+AppRegistry.registerComponent('reactflowjs', () => App);
