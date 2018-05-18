@@ -21,12 +21,12 @@ const styles  = {
     }
 }
 //make component header
-const Header = () => {
+const Header = (props) => {
     const {textStyle,viewStyle}= styles
 
     return (
     <View style={viewStyle}>
-        <Text style={textStyle}>Artificial Intelligence App</Text>
+        <Text style={textStyle}>{props.title}</Text>
     </View>
     )
 }
