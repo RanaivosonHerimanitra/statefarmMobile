@@ -3,11 +3,11 @@ A react native application with expressjs backend which serves tensorflow model 
 
 ## Start the server:
 
-Inside `reactflowjs`, on the terminal: 
+Inside `reactflowjs` folder, on the terminal: 
 
 `$ cd server`
 
-`$ npm install` (to install all dependencies)
+`$ npm install` (to install all dependencies, may need super user privilege such sudo)
 
 `$ yarn mnist` (to start server)
 
@@ -17,7 +17,7 @@ Inside `reactflowjs`, on the terminal:
 
 `$ cd reactflowjs`
 
-`$ npm install` (to install all dependencies)
+`$ npm install` (to install all dependencies, may need super user privilege such sudo)
 
-`exp start` (may need super user privilege such sudo )
+`$ exp start` (may need super user privilege such sudo )
 
