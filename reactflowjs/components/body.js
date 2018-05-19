@@ -110,10 +110,23 @@ export default class Body extends Component {
           aspect: [4, 3],
         });
         this.setState({image:pickerResult.uri})
-        const query_url = `http://192.168.122.1:3000/profile/${this.state.imageObj}`
-        const request =axios.get(query_url, 
-          {responseType: 'arraybuffer'}).then(res => new Buffer(res.data, 'binary').toString('base64'))
-          return(request)
+        const data = new FormData();
+        //ifconfig -a wlan
+        const query_url = "https://172.16.173.96:3000/profile/"
+        data.append('photo', {
+          uri: this.state.imageObj,
+          type: 'image/jpeg', 
+          name: 'avatar'
+        });
+        fetch(query_url, {
+          method: 'post',
+          body: data
+        }).then(res => {console.log(res)}).catch(
+               error => console.log(error) )
+        
+        //const request =axios.get(query_url, 
+          //{responseType: 'arraybuffer'}).then(res => new Buffer(res.data, 'binary').toString('base64'))
+          //return(request)
        
     
        // this._handleImagePicked(pickerResult);
