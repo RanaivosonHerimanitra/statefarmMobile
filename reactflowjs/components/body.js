@@ -112,9 +112,9 @@ export default class Body extends Component {
         this.setState({image:pickerResult.uri})
         const data = new FormData();
         //ifconfig -a wlan
-        const query_url = "https://172.16.173.96:3000/profile/"
-        data.append('photo', {
-          uri: this.state.imageObj,
+        const query_url = "http://192.168.0.42:3000/profile/"
+        data.append('avatar', {
+          uri: this.state.image,
           type: 'image/jpeg', 
           name: 'avatar'
         });
